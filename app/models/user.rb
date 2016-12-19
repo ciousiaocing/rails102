@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
 
   has_many :groups
   has_many :posts
+  has_many :group_relationships
+  has_many :participated_groups, :through => :group_relationship, :source => :group
 end
